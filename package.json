@@ -1,0 +1,22 @@
+{
+  "name": "generator-cyclops",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CyclopsMC/generator-cyclops"
+  },
+  "author": "rubensworks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CyclopsMC/generator-cyclops/issues"
+  },
+  "homepage": "https://github.com/CyclopsMC/generator-cyclops",
+  "files": [
+    "generators/mod"
+  ],
+  "keywords": ["yeoman-generator"],
+  "dependencies": {
+    "yeoman-generator": "^0.21.1"
+  }
+}

@@ -1,0 +1,17 @@
+[
+{
+  "modid": "<%= modid %>",
+  "name": "<%= modname %>",
+  "description": "<%= description %>",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "logoFile": "assets/<%= modid %>/textures/logo.png",
+  "url": "https://github.com/CyclopsMC/<%= modnamejoined %>",
+  "updateUrl": "todo",
+  "authorList": [ <%= author %> ],
+  "credits": "<%= credits %>",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

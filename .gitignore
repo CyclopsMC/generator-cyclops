@@ -1,0 +1,6 @@
+# Ignore project specific files
+node_modules
+.idea
+
+# Ignore mac-specific file(s)
+.DS_Store
