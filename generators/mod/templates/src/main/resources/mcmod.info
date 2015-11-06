@@ -6,7 +6,7 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "logoFile": "assets/<%= modid %>/textures/logo.png",
-  "url": "https://github.com/CyclopsMC/<%= modnamejoined %>",
+  "url": "https://github.com/<%= repo %>",
   "updateUrl": "todo",
   "authorList": [ <%= author %> ],
   "credits": "<%= credits %>",

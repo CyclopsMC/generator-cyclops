@@ -26,7 +26,7 @@ import org.cyclops.cyclopscore.proxy.ICommonProxy;
         dependencies = Reference.MOD_DEPENDENCIES,
         guiFactory = "<%= group %>.GuiConfigOverview$ExtendedConfigGuiFactory"
 )
-public class <%= modnamejoined %> extends ModBaseVersionable {
+public class <%= baseClass %> extends ModBaseVersionable {
     
     /**
      * The proxy of this mod, depending on 'side' a different proxy will be inside this field.
@@ -39,9 +39,9 @@ public class <%= modnamejoined %> extends ModBaseVersionable {
      * The unique instance of this mod.
      */
     @Instance(value = Reference.MOD_ID)
-    public static <%= modnamejoined %> _instance;
+    public static <%= baseClass %> _instance;
 
-    public <%= modnamejoined %>() {
+    public <%= baseClass %>() {
         super(Reference.MOD_ID, Reference.MOD_NAME, Reference.MOD_VERSION);
     }
 
@@ -134,7 +134,7 @@ public class <%= modnamejoined %> extends ModBaseVersionable {
      * @param message The message to show.
      */
     public static void clog(Level level, String message) {
-        <%= modnamejoined %>._instance.getLoggerHelper().log(level, message);
+        <%= baseClass %>._instance.getLoggerHelper().log(level, message);
     }
     
 }

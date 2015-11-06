@@ -2,7 +2,7 @@ package <%= group %>.proxy;
 
 import org.cyclops.cyclopscore.init.ModBase;
 import org.cyclops.cyclopscore.proxy.ClientProxyComponent;
-import <%= group %>.<%= modnamejoined %>;
+import <%= group %>.<%= baseClass %>;
 
 /**
  * Proxy for the client side.
@@ -18,7 +18,7 @@ public class ClientProxy extends ClientProxyComponent {
 
 	@Override
 	public ModBase getMod() {
-		return <%= modnamejoined %>._instance;
+		return <%= baseClass %>._instance;
 	}
     
 }

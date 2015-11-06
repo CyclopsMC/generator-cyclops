@@ -46,6 +46,15 @@ module.exports = generators.Base.extend({
                 return !/\s/g.test(input) && /^[a-z\.]+$/.test(input);
             }
         }, {
+            name    : 'baseClass',
+            message : 'The mod\'s classname',
+            default : function(props) {
+                return props.modname.replace(/\s/g, '');
+            },
+            validate: function(input) {
+                return !/\s/g.test(input) && !/\./.test(input);
+            }
+        }, {
             name    : 'archivesBaseName',
             message : 'The Jar base name',
             default : function(props) {
@@ -55,12 +64,27 @@ module.exports = generators.Base.extend({
                 return !/\s/g.test(input);
             }
         }, {
+            name    : 'repo',
+            message : 'Github repo location',
+            default : function(props) {
+                return "CyclopsMC/" + props.modname.replace(/\s/g, '');
+            },
+            validate: function(input) {
+                return !/\s/g.test(input);
+            }
+        }, {
             name    : 'cfid',
-            message : 'Curseforge Project ID'
+            message : 'Curseforge Project ID',
+            default : 'TODO'
+        }, {
+            name    : 'target',
+            message : 'The target directory name for this mod',
+            default : function(props) {
+                return props.modname.replace(/\s/g, '');
+            }
         }];
         this.prompt(prompts, function (props) {
             this.props = props;
-            this.props.modnamejoined = this.props.modname.replace(/\s/g, '');
             done();
         }.bind(this));
     },
@@ -70,7 +94,7 @@ module.exports = generators.Base.extend({
             v_smr + 'mcmod.info',
             v_smr + 'pack.mcmeta',
             { src: v_r + ".gitkeep", dest: v_smr + "assets/" + this.props.modid + "/.gitkeep" },
-            { src: v_c + "Todo.java", dest: vcr + this.props.modnamejoined + ".java" },
+            { src: v_c + "Todo.java", dest: vcr + this.props.baseClass + ".java" },
             { src: v_c + "Reference.java", dest: vcr + "Reference.java" },
             { src: v_c + "GuiConfigOverview.java", dest: vcr + "GuiConfigOverview.java" },
             { src: v_c + "proxy/ClientProxy.java", dest: vcr + "proxy/ClientProxy.java" },
@@ -97,7 +121,7 @@ module.exports = generators.Base.extend({
                 d = typeof file == "string" ? file : file.dest;
             self.fs.copyTpl(
               self.templatePath(s),
-              self.destinationPath(props.modnamejoined + d),
+              self.destinationPath(self.props.target + "/" + d),
               self.props
             )
         });

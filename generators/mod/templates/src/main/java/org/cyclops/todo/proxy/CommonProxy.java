@@ -2,7 +2,7 @@ package <%= group %>.proxy;
 
 import org.cyclops.cyclopscore.init.ModBase;
 import org.cyclops.cyclopscore.proxy.CommonProxyComponent;
-import <%= group %>.<%= modnamejoined %>;
+import <%= group %>.<%= baseClass %>;
 
 /**
  * Proxy for server and client side.
@@ -13,7 +13,7 @@ public class CommonProxy extends CommonProxyComponent {
 
     @Override
     public ModBase getMod() {
-        return <%= modnamejoined %>._instance;
+        return <%= baseClass %>._instance;
     }
 
 }

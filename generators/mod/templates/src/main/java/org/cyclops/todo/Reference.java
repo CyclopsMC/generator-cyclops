@@ -11,7 +11,7 @@ public class Reference {
 	
     // Mod info
     public static final String MOD_ID = "<%= modid %>";
-    public static final String MOD_NAME = "<%= modnamejoined %>";
+    public static final String MOD_NAME = "<%= modname %>";
     public static final String MOD_VERSION = "@VERSION@";
     public static final String MOD_BUILD_NUMBER = "@BUILD_NUMBER@";
     public static final String MOD_CHANNEL = MOD_ID;

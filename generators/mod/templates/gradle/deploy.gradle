@@ -66,17 +66,17 @@ uploadArchives {
             name project.archivesBaseName
             packaging 'jar'
             description 'todo'
-            url 'https://github.com/CyclopsMC/<%= modnamejoined %>'
+            url 'https://github.com/<%= repo %>'
 
             scm {
-                url 'https://github.com/CyclopsMC/<%= modnamejoined %>'
-                connection 'scm:git:git://github.com/CyclopsMC/<%= modnamejoined %>.git'
-                developerConnection 'scm:git:git@github.com:CyclopsMC/<%= modnamejoined %>.git'
+                url 'https://github.com/<%= repo %>'
+                connection 'scm:git:git://github.com/<%= repo %>.git'
+                developerConnection 'scm:git:git@github.com:<%= repo %>.git'
             }
 
             issueManagement {
                 system 'github'
-                url 'https://github.com/CyclopsMC/<%= modnamejoined %>/issues'
+                url 'https://github.com/<%= repo %>/issues'
             }
 
             developers {

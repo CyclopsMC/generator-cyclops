@@ -16,7 +16,7 @@ deploy:
     script: ./gradlew curseforge -S
     on:
       all_branches: true
-      repo: CyclopsMC/<%= modnamejoined %>
+      repo: <%= repo %>
       tags: true
   - provider: releases
     skip_cleanup: true
@@ -24,12 +24,12 @@ deploy:
       secure: TODO
     on:
       all_branches: true
-      repo: CyclopsMC/<%= modnamejoined %>
+      repo: <%= repo %>
       tags: true
   - provider: script
     skip_cleanup: true
     script: ./gradlew uploadArchives -S
     on:
       all_branches: true
-      repo: CyclopsMC/<%= modnamejoined %>
+      repo: <%= repo %>
       condition: "$TRAVIS_BRANCH =~ ^(master|release).*$"

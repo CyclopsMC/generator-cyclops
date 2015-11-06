@@ -14,12 +14,12 @@ public class GuiConfigOverview extends GuiConfigOverviewBase {
      * @param parentScreen the parent GuiScreen object
      */
     public GuiConfigOverview(GuiScreen parentScreen) {
-        super(<%= modnamejoined %>._instance, parentScreen);
+        super(<%= baseClass %>._instance, parentScreen);
     }
 
     @Override
     public ModBase getMod() {
-        return <%= modnamejoined %>._instance;
+        return <%= baseClass %>._instance;
     }
 
     public static class ExtendedConfigGuiFactory extends ExtendedConfigGuiFactoryBase {
