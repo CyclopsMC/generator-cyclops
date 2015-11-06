@@ -9,12 +9,14 @@ var v_smj = "src/main/java/",
 module.exports = generators.Base.extend({
     constructor: function () {
         generators.Base.apply(this, arguments);
+        this.argument('modname', { type: String, required: false, optional: true });
     },
     prompting: function () {
         var done = this.async();
         var prompts = [{
             name    : 'modname',
-            message : 'Mod name'
+            message : 'Mod name',
+            default : this.modname
         }, {
             name    : 'modid',
             message : 'Mod id',
@@ -29,7 +31,8 @@ module.exports = generators.Base.extend({
             message : 'Mod description'
         }, {
             name    : 'author',
-            message : 'Your developer name'
+            message : 'Your developer name',
+            store   : true
         }, {
             name    : 'credits',
             message : 'Credits',
