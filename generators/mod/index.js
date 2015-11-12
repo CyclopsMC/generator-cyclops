@@ -80,6 +80,10 @@ module.exports = generators.Base.extend({
             message : 'Curseforge Project ID',
             default : 'TODO'
         }, {
+            name    : 'trackingid',
+            message : 'Google Analytics Tracking ID',
+            default : 'TODO'
+        }, {
             name    : 'target',
             message : 'The target directory name for this mod',
             default : function(props) {
