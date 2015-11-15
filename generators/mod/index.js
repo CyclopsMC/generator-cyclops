@@ -84,6 +84,12 @@ module.exports = generators.Base.extend({
             message : 'Google Analytics Tracking ID',
             default : 'TODO'
         }, {
+            name    : 'versioncheckurl',
+            message : 'Version checking URL',
+            default : function(props) {
+                return 'https://raw.githubusercontent.com/CyclopsMC/Versions/master/1.8/' + props.modname.replace(/\s/g, '') + '.txt';
+            }
+        }, {
             name    : 'target',
             message : 'The target directory name for this mod',
             default : function(props) {
