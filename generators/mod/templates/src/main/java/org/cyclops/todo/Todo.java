@@ -116,6 +116,11 @@ public class <%= baseClass %> extends ModBaseVersionable {
     }
 
     @Override
+    public void onGeneralConfigsRegister(ConfigHandler configHandler) {
+        configHandler.add(new GeneralConfig());
+    }
+
+    @Override
     public ICommonProxy getProxy() {
         return proxy;
     }

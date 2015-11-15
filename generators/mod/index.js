@@ -103,6 +103,7 @@ module.exports = generators.Base.extend({
             { src: v_r + ".gitkeep", dest: v_smr + "assets/" + this.props.modid + "/.gitkeep" },
             { src: v_c + "Todo.java", dest: vcr + this.props.baseClass + ".java" },
             { src: v_c + "Reference.java", dest: vcr + "Reference.java" },
+            { src: v_c + "GeneralConfig.java", dest: vcr + "GeneralConfig.java" },
             { src: v_c + "GuiConfigOverview.java", dest: vcr + "GuiConfigOverview.java" },
             { src: v_c + "proxy/ClientProxy.java", dest: vcr + "proxy/ClientProxy.java" },
             { src: v_c + "proxy/CommonProxy.java", dest: vcr + "proxy/CommonProxy.java" },
