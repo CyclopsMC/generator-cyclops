@@ -113,7 +113,9 @@ public class <%= baseClass %> extends ModBaseVersionable {
 
     @Override
     public CreativeTabs constructDefaultCreativeTab() {
-        return new ItemCreativeTab(this, new ItemConfigReference(null)); // TODO: an item config class, or return null for this method
+        // Uncomment the following line and specify an item config class to add a creative tab
+        // return new ItemCreativeTab(this, new ItemConfigReference(ITEM CONFIG CLASS));
+        return null;
     }
 
     @Override
