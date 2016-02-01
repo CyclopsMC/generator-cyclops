@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
 import org.apache.logging.log4j.Level;
+import org.cyclops.cyclopscore.config.ConfigHandler;
 import org.cyclops.cyclopscore.config.extendedconfig.ItemConfigReference;
 import org.cyclops.cyclopscore.init.ItemCreativeTab;
 import org.cyclops.cyclopscore.init.ModBaseVersionable;
@@ -47,7 +48,7 @@ public class <%= baseClass %> extends ModBaseVersionable {
 
     @Override
     protected RecipeHandler constructRecipeHandler() {
-        return new RecipeHandler(Todo._instance);
+        return new RecipeHandler(this);
     }
 
     /**
@@ -112,7 +113,9 @@ public class <%= baseClass %> extends ModBaseVersionable {
 
     @Override
     public CreativeTabs constructDefaultCreativeTab() {
-        return new ItemCreativeTab(this, new ItemConfigReference(null)); // TODO: an item config class, or return null for this method
+        // Uncomment the following line and specify an item config class to add a creative tab
+        // return new ItemCreativeTab(this, new ItemConfigReference(ITEM CONFIG CLASS));
+        return null;
     }
 
     @Override

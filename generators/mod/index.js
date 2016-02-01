@@ -121,7 +121,6 @@ module.exports = generators.Base.extend({
             "gradle/forge.gradle",
             "build.gradle",
             "build.properties",
-            "gradle.properties",
             "gradle.properties_template",
             "gradlew",
             "gradlew.bat",
