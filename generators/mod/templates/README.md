@@ -1,4 +1,4 @@
-## Todo
+## <%= modname %>
 
 [![Build Status](https://travis-ci.org/<%= repo %>.svg?branch=master-1.8)](https://travis-ci.org/<%= repo %>)
 
