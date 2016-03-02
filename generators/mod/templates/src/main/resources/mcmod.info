@@ -8,7 +8,7 @@
   "logoFile": "assets/<%= modid %>/textures/logo.png",
   "url": "https://github.com/<%= repo %>",
   "updateUrl": "todo",
-  "authorList": [ <%= author %> ],
+  "authorList": [ "<%= author %>" ],
   "credits": "<%= credits %>",
   "parent": "",
   "screenshots": [],
