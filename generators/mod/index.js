@@ -87,7 +87,7 @@ module.exports = generators.Base.extend({
             name    : 'versioncheckurl',
             message : 'Version checking URL',
             default : function(props) {
-                return 'https://raw.githubusercontent.com/CyclopsMC/Versions/master/1.9/' + props.modname.replace(/\s/g, '') + '.txt';
+                return 'https://raw.githubusercontent.com/CyclopsMC/Versions/master/1.10/' + props.modname.replace(/\s/g, '') + '.txt';
             }
         }, {
             name    : 'target',
