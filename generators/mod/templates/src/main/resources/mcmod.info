@@ -7,7 +7,7 @@
   "mcversion": "${mcversion}",
   "logoFile": "assets/<%= modid %>/textures/logo.png",
   "url": "https://github.com/<%= repo %>",
-  "updateUrl": "todo",
+  "updateUrl": "https://minecraft.curseforge.com/projects/<%= cfid %>",
   "authorList": [ "<%= author %>" ],
   "credits": "<%= credits %>",
   "parent": "",
