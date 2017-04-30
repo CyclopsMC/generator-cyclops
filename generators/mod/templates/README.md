@@ -1,7 +1,7 @@
 ## <%= modname %>
 
 [![Build Status](https://travis-ci.org/<%= repo %>.svg?branch=master-1.10)](https://travis-ci.org/<%= repo %>)
-[![Download](https://api.bintray.com/packages/cyclopsmc/dev/<%= repo %>/images/download.svg) ](https://bintray.com/cyclopsmc/dev/<%= repo %>/_latestVersion)
+[![Download](https://api.bintray.com/packages/cyclopsmc/dev/<%= modname %>/images/download.svg) ](https://bintray.com/cyclopsmc/dev/<%= modname %>/_latestVersion)
 [![CurseForge](http://cf.way2muchnoise.eu/full_<%= cfid %>_downloads.svg)](http://minecraft.curseforge.com/projects/<%= cfid %>)
 
 <%= description %>
