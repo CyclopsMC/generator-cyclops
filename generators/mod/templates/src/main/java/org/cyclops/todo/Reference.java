@@ -30,7 +30,7 @@ public class Reference {
     public static final String MODEL_PATH = "models/";
     
     // MOD ID's
-    public static final String MOD_FORGE = "Forge";
+    public static final String MOD_FORGE = "forge";
     public static final String MOD_FORGE_VERSION = "@FORGE_VERSION@";
     public static final String MOD_FORGE_VERSION_MIN = "13.20.0.2282";
     public static final String MOD_CYCLOPSCORE = "cyclopscore";
