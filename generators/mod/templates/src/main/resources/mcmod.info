@@ -12,6 +12,7 @@
   "credits": "<%= credits %>",
   "parent": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": [],
+  "requiredMods": [ "forge", "cyclopscore" ]
 }
 ]
