@@ -15,12 +15,17 @@ Running `yo cyclops:mod` will create a new mod directory based on the answers yo
 You will need to fill in the following things when using this template:
 
 * Update secret keys and repo locations in `.travis.yml`
+* Encrypt keystore file in `.travis.yml`
 
 If using travis, you will need to enter the following secrets in your build settings:
 * `CURSEFORGE_KEY_SECRET`: Your curseforge key for automatic release publishing when a new tag is pushed
 * `MAVEN_URL`: (Optional), for automatic dev build publishing
 * `MAVEN_USERNAME`: (Optional), maven username for the dev build publishing
 * `MAVEN_KEY`: (Optional), maven password for the dev build publishing
+* `SIGN_KEYSTORE`: Keystore file
+* `SIGN_ALIAS`: Keystore alias
+* `SIGN_STOREPASS`: Keystore pass
+* `SIGN_KEYPASS`: Key pass
 
 ### Branching Strategy
 
