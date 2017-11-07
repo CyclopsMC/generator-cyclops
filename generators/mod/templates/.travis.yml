@@ -6,7 +6,7 @@ env:
   global:
   - TERM=dumb
 
-before_install: TODO: run travis encrypt-file keystore.jks
+before_install: TODO: run travis encrypt-file keystore.jks and prefix with '[ "${TRAVIS_PULL_REQUEST}" != "false" ] || '
 install: ./gradlew setupCIWorkspace -S
 script: ./gradlew build -S
 
