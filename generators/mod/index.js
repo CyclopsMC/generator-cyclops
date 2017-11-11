@@ -114,6 +114,8 @@ module.exports = generators.Base.extend({
             { src: v_c + "proxy/CommonProxy.java", dest: vcr + "proxy/CommonProxy.java" },
             ".gitignore",
             ".travis.yml",
+            ".github/CONTRIBUTING.md",
+            ".github/ISSUE_TEMPLATE.md",
             "gradle/wrapper",
             "gradle/deploy.gradle",
             "gradle/dev.gradle",
