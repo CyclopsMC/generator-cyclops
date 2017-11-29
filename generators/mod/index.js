@@ -105,6 +105,7 @@ module.exports = generators.Base.extend({
         var vcr = v_smj + this.props.group.replace(/\./g, '/') + "/";
         var files = [
             v_smr + 'mcmod.info',
+            v_smr + 'pack.mcmeta',
             { src: v_r + ".gitkeep", dest: v_smr + "assets/" + this.props.modid + "/.gitkeep" },
             { src: v_c + "Todo.java", dest: vcr + this.props.baseClass + ".java" },
             { src: v_c + "Reference.java", dest: vcr + "Reference.java" },
