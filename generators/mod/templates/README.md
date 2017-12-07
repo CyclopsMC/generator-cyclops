@@ -2,11 +2,14 @@
 
 [![Build Status](https://travis-ci.org/<%= repo %>.svg?branch=master-1.10)](https://travis-ci.org/<%= repo %>)
 [![Download](https://api.bintray.com/packages/cyclopsmc/dev/<%= modname %>/images/download.svg) ](https://bintray.com/cyclopsmc/dev/<%= modname %>/_latestVersion)
+[![Download](https://img.shields.io/maven-metadata/v/http/cyclopsmc.jfrog.io/cyclopsmc/libs-release/org/cyclops/<%= modid %>/<%= modname %>/maven-metadata.xml.svg) ](https://cyclopsmc.jfrog.io/cyclopsmc/libs-release/org/cyclops/<%= modid %>/<%= modname %>/)
 [![CurseForge](http://cf.way2muchnoise.eu/full_<%= cfid %>_downloads.svg)](http://minecraft.curseforge.com/projects/<%= cfid %>)
 
 <%= description %>
 
 All stable releases (including deobfuscated builds) can be found on [CurseForge](http://minecraft.curseforge.com/mc-mods/<%= cfid %>/files).
+
+[Development builds](https://cyclopsmc.jfrog.io/cyclopsmc/libs-release/org/cyclops/<%= modid %>/<%= modname %>/) are hosted by [JFrog Artifactory](https://www.jfrog.com/artifactory/).
 
 ### Contributing
 * Before submitting a pull request containing a new feature, please discuss this first with one of the lead developers.
