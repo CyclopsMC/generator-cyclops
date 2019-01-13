@@ -7,7 +7,7 @@
 
 <%= description %>
 
-All stable releases (including deobfuscated builds) can be found on [CurseForge](http://minecraft.curseforge.com/mc-mods/<%= cfid %>/files).
+All stable releases (including deobfuscated builds) can be found on [CurseForge](http://minecraft.curseforge.com/projects/<%= cfid %>/files).
 
 [Development builds](https://oss.jfrog.org/artifactory/simple/libs-release/org/cyclops/<%= modid %>/<%= modname %>/) are hosted by [JFrog Artifactory](https://www.jfrog.com/artifactory/).
 
