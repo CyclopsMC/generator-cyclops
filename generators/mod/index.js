@@ -116,6 +116,7 @@ module.exports = generators.Base.extend({
             ".gitignore",
             ".travis.yml",
             ".github/CONTRIBUTING.md",
+			".github/FUNDING.md",
             ".github/ISSUE_TEMPLATE.md",
 			".github/ISSUE_TEMPLATE/Bug_report.md",
 			".github/ISSUE_TEMPLATE/Feature_request.md",
