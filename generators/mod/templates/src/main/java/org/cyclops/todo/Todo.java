@@ -14,119 +14,58 @@ import org.cyclops.cyclopscore.init.ModBaseVersionable;
 import org.cyclops.cyclopscore.init.RecipeHandler;
 import org.cyclops.cyclopscore.proxy.ICommonProxy;
 
+import net.minecraft.item.ItemGroup;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.common.Mod;
+import org.apache.logging.log4j.Level;
+import <%= group %>.proxy.ClientProxy;
+import <%= group %>.proxy.CommonProxy;
+import org.cyclops.cyclopscore.config.ConfigHandler;
+import org.cyclops.cyclopscore.init.ItemGroupMod;
+import org.cyclops.cyclopscore.init.ModBaseVersionable;
+import org.cyclops.cyclopscore.proxy.IClientProxy;
+import org.cyclops.cyclopscore.proxy.ICommonProxy;
+
 /**
  * The main mod class of this mod.
  * @author <%= author %>
  *
  */
-@Mod(
-        modid = Reference.MOD_ID,
-        name = Reference.MOD_NAME,
-        useMetadata = true,
-        version = Reference.MOD_VERSION,
-        dependencies = Reference.MOD_DEPENDENCIES,
-        guiFactory = "<%= group %>.GuiConfigOverview$ExtendedConfigGuiFactory",
-        certificateFingerprint = Reference.MOD_FINGERPRINT
-)
-public class <%= baseClass %> extends ModBaseVersionable {
-    
-    /**
-     * The proxy of this mod, depending on 'side' a different proxy will be inside this field.
-     * @see SidedProxy
-     */
-    @SidedProxy(clientSide = "<%= group %>.proxy.ClientProxy", serverSide = "<%= group %>.proxy.CommonProxy")
-    public static ICommonProxy proxy;
+@Mod(Reference.MOD_ID)
+public class <%= baseClass %> extends ModBaseVersionable<<%= baseClass %>> {
     
     /**
      * The unique instance of this mod.
      */
-    @Instance(value = Reference.MOD_ID)
     public static <%= baseClass %> _instance;
 
     public <%= baseClass %>() {
-        super(Reference.MOD_ID, Reference.MOD_NAME, Reference.MOD_VERSION);
+        super(Reference.MOD_ID, (instance) -> _instance = instance);
     }
 
     @Override
-    protected RecipeHandler constructRecipeHandler() {
-        return new RecipeHandler(this);
-    }
-
-    /**
-     * The pre-initialization, will register required configs.
-     * @param event The Forge event required for this.
-     */
-    @EventHandler
-    @Override
-    public void preInit(FMLPreInitializationEvent event) {
-        super.preInit(event);
-    }
-    
-    /**
-     * Register the config dependent things like world generation and proxy handlers.
-     * @param event The Forge event required for this.
-     */
-    @EventHandler
-    @Override
-    public void init(FMLInitializationEvent event) {
-        super.init(event);
-    }
-    
-    /**
-     * Register the event hooks.
-     * @param event The Forge event required for this.
-     */
-    @EventHandler
-    @Override
-    public void postInit(FMLPostInitializationEvent event) {
-        super.postInit(event);
-    }
-    
-    /**
-     * Register the things that are related to server starting, like commands.
-     * @param event The Forge event required for this.
-     */
-    @EventHandler
-    @Override
-    public void onServerStarting(FMLServerStartingEvent event) {
-        super.onServerStarting(event);
-    }
-
-    /**
-     * Register the things that are related to server starting.
-     * @param event The Forge event required for this.
-     */
-    @EventHandler
-    @Override
-    public void onServerStarted(FMLServerStartedEvent event) {
-        super.onServerStarted(event);
-    }
-
-    /**
-     * Register the things that are related to server stopping, like persistent storage.
-     * @param event The Forge event required for this.
-     */
-    @EventHandler
-    @Override
-    public void onServerStopping(FMLServerStoppingEvent event) {
-        super.onServerStopping(event);
+    @OnlyIn(Dist.CLIENT)
+    protected IClientProxy constructClientProxy() {
+        return new ClientProxy();
     }
 
     @Override
-    public CreativeTabs constructDefaultCreativeTab() {
-        // Uncomment the following line and specify an item config class to add a creative tab
-        // return new ItemCreativeTab(this, new ItemConfigReference(ITEM CONFIG CLASS));
-        return null;
+    @OnlyIn(Dist.DEDICATED_SERVER)
+    protected ICommonProxy constructCommonProxy() {
+        return new CommonProxy();
+    }
+	
+    @Override
+    protected ItemGroup constructDefaultItemGroup() {
+        return null; // TODO
     }
 
     @Override
-    public void onGeneralConfigsRegister(ConfigHandler configHandler) {
-        configHandler.add(new GeneralConfig());
-    }
+    protected void onConfigsRegister(ConfigHandler configHandler) {
+        super.onConfigsRegister(configHandler);
 
-    @Override
-    public ICommonProxy getProxy() {
-        return proxy;
+        configHandler.addConfigurable(new GeneralConfig());
     }
 
     /**

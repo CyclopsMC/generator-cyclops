@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[28.1,)"
+issueTrackerURL="https://github.com/<%= repo %>/issues"
+[[mods]]
+modId="<%= modid %>"
+version="${file.jarVersion}"
+displayName="<%= modname %>"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/<%= modid %>"
+logoFile="logo.png"
+authors="rubensworks (aka kroeser)"
+description='''
+<%= description %>
+'''
+[[dependencies.<%= modid %>]]
+    modId="cyclopscore"
+    mandatory=true
+    versionRange="[1.5.2,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.<%= modid %>]]
+    modId="forge"
+    mandatory=true
+    versionRange="[28.1,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.<%= modid %>]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
