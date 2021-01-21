@@ -8,7 +8,7 @@ about: If something is not working as expected or crashes
 
 #### Issue type:
 
-- :bug: Bug
+- :bug: Bug <!--Don't change this issue type!-->
 
 ____
 
@@ -35,6 +35,10 @@ ____
 - This mod: 
 - Minecraft: 
 - Forge: 
+
+<!--WHEN USING MODPACKS: First report this bug to the modpack author! As it could be a configuration or mod conflict issue.-->
+<!--Before reporting, make sure to try reproducing without any other mods installed.-->
+<!--If this problem only occurs in combination with other mods, attempt to find the smallest set of mods that causes the problem.-->
 
 #### Log file:
 
